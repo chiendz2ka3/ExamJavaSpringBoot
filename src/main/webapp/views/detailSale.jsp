@@ -8,17 +8,17 @@
 <h1> List Customer</h1>
 <table border="1">
     <tr>
-        <th>STT</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Address</th>
+        <th>SalesmanName</th>
+        <th>Sino</th>
+        <th>salemanid</th>
+        <th>prodid</th>
     </tr>
-    <c:forEach var="customer" items="${customers}" varStatus="loop">
+    <c:forEach var="sale" items="${sale}" varStatus="loop">
         <tr>
-            <td>${loop.index + 1}</td>
-            <td>${customer.name}</td>
-            <td>${customer.age}</td>
-            <td>${customer.address}</td>
+            <td>${sale.getSalesmanName()}</td>
+            <td>${customer.getSino()}</td>
+            <td>${customer.getSalemanid()}</td>
+            <td>${customer.getDos()}</td>
         </tr>
     </c:forEach>
 </table>

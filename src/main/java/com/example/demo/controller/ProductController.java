@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.ui.Model;
 import java.util.List;
 
 @RestController
-@RequestMapping("/product")
+@RequestMapping("")
 public class ProductController {
     @Autowired
     private ProductService _context;
 
-    @GetMapping("/getproduct")
-    public String GetListProduct(ModelMap model){
+    @GetMapping("/")
+    public String GetListProduct(Model model){
         String view = "Product";
         try {
             List<ProductEntity> ListProduct = _context.getListProduct();
